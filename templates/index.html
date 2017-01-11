@@ -1,8 +1,9 @@
 <!doctype html>
 <title>COD Dice Roller</title>
 <body>
-	<form>
-		Pool: <input type="number" name="pool" min="0">
+	<form action="recieve_pool" method="POST">
+		Pool: <input type="number" name="pool" min="0"><br>
+		<input type="submit" name="Submit" value="submit">
 
 	</form>
 		Result: {{successes}}
