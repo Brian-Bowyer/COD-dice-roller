@@ -1,2 +1,2 @@
-# COD-dice-roller
-A web dice roller for Chronicles of Darkness, written in Flask
+# COD Dice Roller
+A web dice roller for Chronicles of Darkness, written using Flask
