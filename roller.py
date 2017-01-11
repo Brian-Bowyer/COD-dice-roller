@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from roller_processing import compute_successes
+from roller_processing import compute_successes, count_successes
 app = Flask(__name__)
 
 @app.route('/')
@@ -10,4 +10,6 @@ def roller():
 def recieve_pool():
 	pool = request.form['pool']
 	pool = int(pool) if pool else 0
-	return render_template("index.html", successes = compute_successes(pool))
+	successes = compute_successes(pool)
+	return render_template("index.html", 
+		successes = successes, count = count_successes(successes))
