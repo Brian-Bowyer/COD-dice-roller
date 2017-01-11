@@ -9,4 +9,5 @@ def roller():
 @app.route('/recieve_pool', methods=["POST"])
 def recieve_pool():
 	pool = request.form['pool']
+	pool = int(pool) if pool else 0
 	return render_template("index.html", successes = compute_successes(pool))
