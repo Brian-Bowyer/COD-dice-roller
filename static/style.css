@@ -1,3 +1,15 @@
 body {
 	background-color: white;
 }
+
+.success {
+	color: green;
+}
+
+.failure {
+	color: red;
+}
+
+.exceptional {
+	font-weight: bold;
+}

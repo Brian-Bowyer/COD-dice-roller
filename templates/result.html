@@ -6,11 +6,11 @@
 	{{ super() }}
 	Result: {{count}} successes! <br>
 	{% if count > 5 %}
-	Exceptional success! <br>
+	<div class="success exceptional">Exceptional success!</div> <br>
 	{% elif count > 0 %}
-	Success! <br>
+	<div class="success">Success!</div><br>
 	{% else %}
-	Failure! <br>
+	<div class="failure">Failure! </div><br>
 	{% endif %}
 
 	{{successes}}
