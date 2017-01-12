@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+
+{% block title %} {{super()}} - Results {% endblock %}
+
+{% block content %}
+	{{ super() }}
+	Result: {{count}} successes! <br>
+	{% if count > 5 %}
+	Exceptional success! <br>
+	{% elif count > 0 %}
+	Success! <br>
+	{% else %}
+	Failure! <br>
+	{% endif %}
+
+	{{successes}}
+
+{% endblock %}

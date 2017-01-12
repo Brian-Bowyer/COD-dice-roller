@@ -1,19 +1,18 @@
 <!doctype html>
-<title>COD Dice Roller</title>
-<body>
-	<form action="recieve_pool" method="POST">
-		Pool: <input type="number" name="pool" min="0"><br>
-		<input type="submit" name="Submit" value="submit">
+<html lang="en">
+	<head>
+		{% block head %}
+		<title>{% block title %} COD Dice Roller {% endblock %}</title>
+		{% endblock %}
+	</head>
+	<body>
+		{% block content %}
+		<form action="recieve_pool" method="POST">
+			Pool: <input type="number" name="pool" min="0"><br>
+			<input type="submit" name="Submit" value="submit">
 
-	</form>
-		Result: {{count}} successes! <br>
-		{% if count > 5 %}
-		Exceptional success! <br>
-		{% elif count > 0 %}
-		Success! <br>
-		{% else %}
-		Failure! <br>
-		{% endif %}
+		</form>
 
-		{{successes}}
-</body>
+		{% endblock %}
+	</body>
+</html>
