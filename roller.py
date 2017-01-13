@@ -10,6 +10,7 @@ def index():
 def recieve_pool():
 	pool = request.form['pool']
 	pool = int(pool) if pool else 0
-	successes = compute_successes(pool)
+	again = int(request.form['again'])
+	successes = compute_successes(pool, again)
 	return render_template("result.html", 
 		successes = successes, count = count_successes(successes))
