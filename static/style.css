@@ -2,6 +2,10 @@ body {
 	background-color: white;
 }
 
+form {
+	margin: auto;
+}
+
 .success {
 	color: green;
 }

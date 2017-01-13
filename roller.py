@@ -3,7 +3,7 @@ from roller_processing import compute_successes, count_successes
 app = Flask(__name__)
 
 @app.route('/')
-def roller():
+def index():
 	return render_template("index.html")
 
 @app.route('/recieve_pool', methods=["POST"])
